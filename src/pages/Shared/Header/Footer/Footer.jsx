@@ -4,6 +4,9 @@ const Footer = () => {
     return (
         <div>
             <p className='text-center'><small>Copy right of my news</small></p>
+            <p className='text-center'><small>Copy right of my news</small></p>
+            <p className='text-center'><small>Copy right of my news</small></p>
+            <p className='text-center'><small>Copy right of my news</small></p>
         </div>
     );
 };

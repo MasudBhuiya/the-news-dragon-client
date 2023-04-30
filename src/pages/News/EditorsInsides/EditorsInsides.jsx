@@ -1,27 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
-import first from '../../assets/1.png';
-import second from '../../assets/2.png'
-import third from '../../assets/3.png'
-const LeftNav = () => {
-    const [categories, setCategories] = useState([]);
-    useEffect(()=>{
-        fetch('http://localhost:5000/categories')
-        .then(res => res.json())
-        .then(data => setCategories(data))
-        .catch(error => console.log(error))
-    },[])
+import first from '../../../assets/1.png'
+import second from '../../../assets/2.png'
+import third from '../../../assets/3.png'
+
+const EditorsInsides = () => {
     return (
         <div>
-            <h2>All Category</h2>
-            <div className='ps-4 '>
-            {
-                categories.map(categorie => <p key={categorie.id}><Link to={`/category/${categorie.id}`} className='text-decoration-none text-black'>{categorie.name}</Link></p>)
-            }
-            </div>
-            
-            <Row  xl={1} className="g-4 mt-2">
+            <Row xs={1} md={2} lg={3} className="g-4 mt-2">
         <Col >
           <Card>
             <Card.Img variant="top" src={first} />
@@ -66,4 +52,4 @@ const LeftNav = () => {
     );
 };
 
-export default LeftNav;
+export default EditorsInsides;
