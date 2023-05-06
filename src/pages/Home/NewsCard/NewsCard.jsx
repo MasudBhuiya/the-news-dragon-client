@@ -35,8 +35,8 @@ const NewsCard = ({news}) => {
       </Card.Body>
       <Card.Footer className="text-muted d-flex ">
         <div className='flex-grow-1 d-flex gap-2 align-items-center'>
-        <Rating style={{ maxWidth: 120 }} value={rating} readOnly />
-            <span>{rating.number}</span>
+        <Rating style={{ maxWidth: 120 }} value={Math.round(rating?.number || 0)} readOnly />
+            <span>{rating?.number}</span>
         </div>
         <div><FaEye></FaEye>{total_view}</div>
       </Card.Footer>
